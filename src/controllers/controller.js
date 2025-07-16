@@ -10,7 +10,7 @@ class VuelosController {
             const vuelos = await this.vuelosService.getVuelos();
             res.status(200).json(vuelos);
         } catch (error) {
-            res.status(500).json({ error: "Error consiguiendo los vuelos.", errormsj: error.message });
+            res.status(500).json({ error: "Error consiguiendo los vuelos.", errorMsg: error.message });
         }
     }
 
@@ -21,7 +21,7 @@ class VuelosController {
             res.status(200).json(result);
         }
         catch (error) {
-            res.status(500).json({ error: "Error creando el vuelo.", errormsj: error.message });
+            res.status(500).json({ error: "Error creando el vuelo.", errorMsg: error.message });
         }
     }
 
@@ -32,7 +32,7 @@ class VuelosController {
             const result = await this.vuelosService.patchVuelo(id, vuelo);
            res.status(200).json(result);
         } catch (error) {
-            res.status(500).json({ error: "Error actualizando el vuelo.", errormsj: error.message });
+            res.status(500).json({ error: "Error actualizando el vuelo.", errorMsg: error.message });
         }
     }
 }
